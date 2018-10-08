@@ -1,4 +1,4 @@
-SITE_NAME = ''
+COURSE_NAME = ''
 
 AUTHOR = ''
 
@@ -37,12 +37,6 @@ AUTHORS_SAVE_AS = ''
 CATEGORIES_SAVE_AS = ''
 
 ARCHIVES_SAVE_AS = ''
-
-# TAGS_SAVE_AS = 'topics/index.html'
-#
-# TAG_SAVE_AS = 'topics/{slug}/index.html'
-#
-# TAG_URL = 'topics/{slug}/'
 
 ARTICLE_SAVE_AS = '{category}/{slug}/index.html'
 
