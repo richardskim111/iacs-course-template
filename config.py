@@ -8,7 +8,7 @@ GITHUB = ''
 
 COLOR = '#A51C30'
 
-NAVBAR_LINKS = []
+MENUITEMS = []
 
 PATH = 'content'
 
