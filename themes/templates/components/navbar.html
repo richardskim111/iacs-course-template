@@ -10,15 +10,11 @@
 
     <div class="collapse navbar-collapse" id="navbarsDefault">
       <ul class="navbar-nav ml-auto">
+        {% for (page, url) in MENUITEMS %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ SITEURL }}/pages/syllabus.html">Syllabus</a>
+          <a class="nav-link" href="{{ SITEURL }}/{{ url }}">{{ page }}</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ SITEURL }}/pages/schedule.html">Schedule</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="{{ SITEURL }}/pages/materials.html">Materials</a>
-        </li>
+        {% endfor %}
         <form
           class="form-inline my-2"
           action="{{ SITEURL }}/search.html"
