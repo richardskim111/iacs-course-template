@@ -1,6 +1,6 @@
 {% extends 'components/base.html' %}
 
-
+{% block canonical %}{{ tag.url }}{% endblock %}
 {% block title %}{{ tag.name }}{% endblock %}
 
 

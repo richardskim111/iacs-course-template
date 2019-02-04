@@ -19,6 +19,8 @@
     <link rel='shortcut icon' type='image/x-icon' href='{{ SITEURL }}/style/images/favicon.ico' />
     <link rel="stylesheet" href="{{ SITEURL }}/style/css/hiacs.css">
 
+    <link rel="canonical" href="{{ SITEURL }}/{% block canonical %}{% endblock %}" />
+
     <title>{{ COURSE_NAME }} - {% block title %}{% endblock %}</title>
 
     <style>
