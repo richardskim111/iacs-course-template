@@ -2,13 +2,22 @@ COURSE_NAME = ''
 
 AUTHOR = ''
 
+SEMESTER = ''
+
+YEAR = ''
+
 SITEURL = ''
 
 GITHUB = ''
 
-COLOR = '#A51C30'
+COLOR = '#8996A0'
 
+# Define Navbar links
+# ex. ('Link Name', 'URL')
 MENUITEMS = []
+
+# Uncomment following line if you want document-relative URLs when developing
+RELATIVE_URLS = True
 
 PATH = 'content'
 
@@ -17,6 +26,11 @@ OUTPUT_PATH = 'docs'
 TIMEZONE = 'EST'
 
 DEFAULT_LANG = 'en'
+
+# ================================
+# Pelican Settings
+# Do not modify
+# ================================
 
 FEED_ALL_ATOM = None
 
@@ -46,11 +60,13 @@ AUTHOR_URL = ''
 
 AUTHOR_SAVE_AS = ''
 
+TAG_SAVE_AS = ''
+
 INDEX_SAVE_AS = 'pages/materials.html'
 
 THEME_STATIC_DIR = 'style'
 
-DELETE_OUTPUT_DIRECTORY = False
+DELETE_OUTPUT_DIRECTORY = True
 
 MARKUP = ['md', 'ipynb']
 
@@ -58,14 +74,11 @@ PLUGIN_PATHS = ['plugins']
 
 PLUGINS = ['ipynb.markup', 'tipue_search']
 
-IGNORE_FILES = ['.ipynb_checkpoints', 'README.md']
+IGNORE_FILES = ['.#*', '.ipynb_checkpoints', 'README.md', "*.html", "__pycache__", "*.pdf", "*.pptx", ".placeholder", ".DS_Store", "*.ipynb-meta", "*.csv", "*.json", "*.txt", "*.xmls"]
 
-# Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+STATIC_PATHS = ['lectures', 'labs', 'homeworks', 'a-sections', 'sections', 'wiki', 'images', 'projects', 'slides', 'data']
 
-STATIC_PATHS = ['lectures', 'labs', 'homeworks', 'sections', 'wiki', 'images', 'projects']
-
-DIRECT_TEMPLATES = ['index', 'category', 'tags', 'search']
+DIRECT_TEMPLATES = ['index', 'search']
 
 import re
 
@@ -75,4 +88,9 @@ JINJA_FILTERS = {
 
 USE_FOLDER_AS_CATEGORY = False
 
-LOAD_CONTENT_CACHE = True
+import logging
+
+LOG_FILTER = [
+    (logging.WARN, "Empty alt attribute for image %s in %s"),
+    (logging.WARN, "Meta tag in file %s does not have a 'name' attribute, skipping. Attributes: content=%s")
+]
