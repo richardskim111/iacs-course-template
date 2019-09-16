@@ -78,12 +78,12 @@ IGNORE_FILES = ['.#*', '.ipynb_checkpoints', 'README.md', "*.html", "__pycache__
 
 STATIC_PATHS = ['lectures', 'labs', 'homeworks', 'a-sections', 'sections', 'wiki', 'images', 'projects', 'slides', 'data']
 
-DIRECT_TEMPLATES = ['index', 'search']
+DIRECT_TEMPLATES = ['index', 'search', 'tags', 'category']
 
 import re
 
 JINJA_FILTERS = {
-    'original_content': lambda x: re.search(r"content/.*", x).group(0)
+    'original_content': lambda x: re.search(r"content/(.*)", x).group(1)
 }
 
 USE_FOLDER_AS_CATEGORY = False
